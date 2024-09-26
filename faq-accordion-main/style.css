@@ -32,7 +32,6 @@ body {
   align-items: center;
   width: 100%;
   flex-direction: column;
-  height: 100vh;
 }
 
 .card {
@@ -62,7 +61,7 @@ body {
 }
 
 .card p {
-  color: var(--Darkpurple);
+  color: var(--Grayishpurple);
   font-size: 16px;
 }
 
