@@ -86,6 +86,7 @@ body {
 .info .preci {
   display: flex;
   align-items: center;
+  font-family: var(--font-secondary);
 }
 
 .info h2 {
