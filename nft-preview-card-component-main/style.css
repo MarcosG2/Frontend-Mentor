@@ -1,0 +1,147 @@
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-dark-blue-main-BG);
+}
+
+.card {
+  width: 350px;
+  background-color: var(--Very-dark-blue-card-BG);
+  border-radius: 1rem;
+}
+
+.container {
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.portada {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.portada .img1 {
+  border-radius: 0.5rem;
+  height: auto;
+  width: 100%; 
+}
+
+.overlay {
+  background-color: var(--Cyan);
+  opacity: 40%;
+  position: absolute;
+  top: 0;
+  bottom: 2px;
+  right: 0;
+  left: 0;
+  border-radius: 1rem;
+  display: none;
+}
+
+.img2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.portada:hover .overlay,
+.portada:hover .img2 {
+  display: block;
+}
+
+.title {
+  color: var(--White);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--Cyan);
+}
+
+.description {
+  color: var(--Soft-blue);
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.nameMoney,
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameMoney img,
+.time img {
+  margin-right: 0.5rem;
+}
+
+.money {
+  color: var(--Cyan);
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+}
+
+.time p {
+  color: var(--Soft-blue);
+  font-family: "Outfit", sans-serif;
+}
+
+hr {
+  border: 0.5px solid var(--Very-dark-blue-line);
+  margin-bottom: 1rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  color: var(--Soft-blue);
+}
+
+.user img {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.userName {
+  color: #fff;
+  cursor: pointer;
+}
+
+.userName:hover {
+  color: var(--Cyan);
+}
