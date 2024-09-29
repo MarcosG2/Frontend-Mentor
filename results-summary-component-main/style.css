@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+  background-color: rgb(201, 207, 245);
+  min-height: 100vh;
+}
+.container {
+  width: 736px;
+  height: 513px;
+  border-radius: 15px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--White);
+}
+
+.sect {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  border-radius: 15px;
+  gap: 20px;
+}
+
+.izq {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+
+.izq h2 {
+  color: var(--Light-lavender);
+}
+
+.circle1 {
+  border-radius: 50%;
+  height: 206px;
+  width: 200px;
+  background: linear-gradient(
+    to bottom,
+    var(--Violet-blue-circle),
+    var(--Persian-blue-circle)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.circle1 h3 {
+  font-weight: 800;
+  font-size: 60px;
+  color: #fff;
+}
+
+.circle1 p {
+  font-weight: 600;
+  color: var(--Light-lavender);
+}
+
+.izq h4 {
+  font-size: 30px;
+  color: var(--White);
+}
+
+.izq .texto {
+  text-align: center;
+  font-size: 18px;
+  padding: 32px;
+  color: var(--Light-lavender);
+}
+
+.der ul {
+  width: 100%;
+}
+
+.lista {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 20px 18px;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  margin: 15px 0;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.name img {
+  margin-right: 8px;
+}
+
+.uno {
+  background-color: hsl(0, 100%, 67%, 0.2);
+}
+
+.dos {
+  background-color: hsl(39, 100%, 56%, 0.2);
+}
+
+.tres {
+  background-color: hsl(166, 100%, 37%, 0.2);
+}
+
+.cuatro {
+  background-color: hsl(234, 85%, 45%, 0.2);
+}
+
+.uno .name {
+  color: var(--Light-red);
+}
+
+.dos .name {
+  color: var(--Orangey-yellow);
+}
+
+.tres .name {
+  color: var(--Green-teal);
+}
+
+.cuatro .name {
+  color: var(--Cobalt-blue);
+}
+
+.stats span {
+  color: #32394b;
+  font-weight: 700;
+}
+
+.stats {
+  color: #6a6d7c;
+  font-weight: 600;
+}
+
+.btn {
+  width: 100%;
+  height: 57px;
+  border-radius: 30px;
+  border: none;
+  background-color: var(--Dark-gray-blue);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .sect {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .izq {
+    padding: 10px 0;
+  }
+
+  .circle1 {
+    height: 150px;
+    width: 150px;
+  }
+
+  .izq h4 {
+    font-size: 24px;
+  }
+
+  .izq .texto {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .btn {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .der {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .circle1 {
+    height: 120px;
+    width: 120px;
+  }
+
+  .izq h2,
+  .der h2 {
+    font-size: 18px;
+  }
+
+  .izq h4 {
+    font-size: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .sect {
+    padding: 10px;
+  }
+}
