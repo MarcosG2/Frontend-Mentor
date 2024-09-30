@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --Pale-blue: hsl(225, 100%, 94%);
+        --Bright-blue: hsl(245, 75%, 52%);
+        --Very-pale-blue: hsl(225, 100%, 98%);
+        --Desaturated-blue: hsl(224, 23%, 55%);
+        --Dark-blue: hsl(223, 47%, 23%);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-image: url(images/pattern-background-desktop.svg);
+        background-color: var(--Pale-blue);
+        background-size: contain;
+        background-repeat: no-repeat;
+        font-family: "Red Hat Display", sans-serif;
+      }
+      .card {
+        width: 400px;
+        background-color: #fff;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .container .photo {
+        width: 100%;
+        height: auto;
+      }
+
+      .card-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1.5rem;
+      }
+
+      .title {
+        color: var(--Dark-blue);
+      }
+
+      .description {
+        text-align: center;
+        padding: 1rem;
+        font-size: 16px;
+        color: var(--Desaturated-blue);
+      }
+
+      .plan {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--Very-pale-blue);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+        color: var(--Desaturated-blue);
+      }
+
+      .left-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .left span {
+        font-weight: bold;
+        color: var(--Dark-blue);
+      }
+
+      .right {
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .right a:hover {
+        list-style: none;
+        opacity: 70%;
+      }
+
+      .btn {
+        width: 100%;
+        background-color: var(--Bright-blue);
+        border: none;
+        border-radius: 1rem;
+        padding: 1rem;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        opacity: 70%;
+      }
+
+      .cancel {
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: "Red Hat Display", sans-serif;
+        color: var(--Desaturated-blue);
+        padding: 1rem;
+        border: none;
+        cursor: pointer;
+      }
+
+      .cancel:hover {
+        color: var(--Dark-blue);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="container">
+        <div class="photo">
+          <img src="images/illustration-hero.svg" alt="illustration-hero" />
+        </div>
+        <div class="card-body">
+          <h2 class="title">Order Summary</h2>
+          <p class="description">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+          <div class="plan">
+            <div class="left">
+              <img src="images/icon-music.svg" alt="icon-music" />
+              <p class="left-text">
+                <span>Annual Plan</span>
+                $59.99/year
+              </p>
+            </div>
+            <div class="right">
+              <a href="#">Change</a>
+            </div>
+          </div>
+          <button class="btn">Proceed to Payment</button>
+          <button class="cancel">Cancel Order</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
